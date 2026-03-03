@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Physio Joni Seppälä | Physiotherapist in Oulu, Finland</title>
+  <meta name="description" content="Professional physiotherapy in Oulu, Finland. Joni Seppälä specialises in sports injuries, back pain, ACL rehab, post-surgery rehab, arthritis support and occupational rehab." />
+  <meta name="keywords" content="physiotherapist Oulu, fysioterapeutti Oulu, sports injury Oulu, back pain treatment Oulu, ACL rehab Oulu, physiotherapy Finland, Joni Seppälä" />
+  <meta name="author" content="Joni Seppälä" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://physijoni.netlify.app/" />
+
+  <!-- hreflang SEO tags for multilingual -->
+  <link rel="alternate" hreflang="en" href="https://physijoni.netlify.app/?lang=en" />
+  <link rel="alternate" hreflang="fi" href="https://physijoni.netlify.app/?lang=fi" />
+  <link rel="alternate" hreflang="sv" href="https://physijoni.netlify.app/?lang=sv" />
+  <link rel="alternate" hreflang="x-default" href="https://physijoni.netlify.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Physio Joni Seppälä | Physiotherapist in Oulu" />
+  <meta property="og:description" content="Expert physiotherapy care in Oulu. Sports injuries, back pain, ACL rehab, post-surgery rehab and more." />
+  <meta property="og:url" content="https://physijoni.netlify.app/" />
+  <meta property="og:locale" content="en_FI" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Physio Joni Seppälä",
+    "description": "Professional physiotherapy services in Oulu, Finland",
+    "url": "https://physijoni.netlify.app/",
+    "telephone": "+3589098756",
+    "email": "joniseppala@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Oulu", "addressCountry": "FI" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 65.0121, "longitude": 25.4651 },
+    "areaServed": "Oulu",
+    "priceRange": "€€",
+    "medicalSpecialty": "Physiotherapy",
+    "availableService": [
+      { "@type": "MedicalTherapy", "name": "Sports Injuries" },
+      { "@type": "MedicalTherapy", "name": "Back Pain Treatment" },
+      { "@type": "MedicalTherapy", "name": "Arthritis Support" },
+      { "@type": "MedicalTherapy", "name": "ACL Rehabilitation" },
+      { "@type": "MedicalTherapy", "name": "Post-Surgery Rehabilitation" },
+      { "@type": "MedicalTherapy", "name": "Occupational Rehabilitation" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --bg-alt: #eaecf0;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-mid: #444455;
+      --text-light: #6b7280;
+      --accent: #1a5fb4;
+      --accent-bright: #2d7dd2;
+      --accent-light: #dbeafe;
+      --border: #d1d5db;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 4rem;
+      background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.05em; color: var(--text); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.85rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent) !important; color: #fff !important; padding: 0.5rem 1.3rem; border-radius: 2px; }
+    .nav-cta:hover { background: var(--accent-bright) !important; color: #fff !important; }
+
+    /* LANGUAGE SWITCHER */
+    .lang-switcher { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; margin-left: 1rem; }
+    .lang-btn { background: none; border: none; padding: 0.35rem 0.65rem; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; cursor: pointer; color: var(--text-light); transition: background 0.2s, color 0.2s; border-right: 1px solid var(--border); }
+    .lang-btn:last-child { border-right: none; }
+    .lang-btn:hover { background: var(--accent-light); color: var(--accent); }
+    .lang-btn.active { background: var(--accent); color: #fff; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); display: block; }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; padding: 8rem 4rem 4rem;
+      background-image: url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1600&q=80');
+      background-size: cover; background-position: center 30%;
+    }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,15,30,0.82) 0%, rgba(10,15,30,0.65) 55%, rgba(10,15,30,0.3) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 680px; }
+    .hero-eyebrow { font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: #7dd3fc; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+    h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.12; margin-bottom: 1.5rem; color: #ffffff; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+    h1 em { font-style: normal; color: #7dd3fc; }
+    .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.78); max-width: 520px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+    .btn-primary { display: inline-block; background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-decoration: none; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: var(--accent-bright); transform: translateY(-2px); }
+    .btn-secondary { display: inline-block; border: 1px solid rgba(255,255,255,0.45); color: #fff; padding: 0.9rem 2.2rem; font-size: 0.9rem; font-weight: 400; letter-spacing: 0.05em; text-decoration: none; border-radius: 2px; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .hero-stats { position: absolute; right: 4rem; bottom: 4rem; display: flex; gap: 3rem; opacity: 0; animation: fadeUp 0.8s 1s forwards; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 300; color: #fff; line-height: 1; }
+    .stat-num span { color: #7dd3fc; font-size: 1.8rem; }
+    .stat-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 0.3rem; }
+
+    /* SHARED */
+    section { padding: 6rem 4rem; }
+    .section-label { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.2; margin-bottom: 1.5rem; color: var(--text); }
+
+    /* SERVICES */
+    #services { background: var(--white); }
+    .services-intro { max-width: 600px; margin-bottom: 4rem; }
+    .services-intro p { color: var(--text-light); line-height: 1.8; font-weight: 300; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .service-card { background: var(--white); padding: 2.5rem; position: relative; overflow: hidden; transition: background 0.3s; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--accent); transition: height 0.4s; }
+    .service-card:hover::before { height: 100%; }
+    .service-card:hover { background: var(--accent-light); }
+    .service-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+    .service-card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--text); }
+    .service-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+
+    /* ABOUT */
+    #about { background: var(--bg); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-card { background: var(--white); border: 1px solid var(--border); padding: 3rem; position: relative; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+    .about-card::after { content: ''; position: absolute; bottom: -10px; right: -10px; width: 100%; height: 100%; border: 1px solid var(--border); z-index: -1; }
+    .about-quote { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 300; line-height: 1.6; color: var(--text); margin-bottom: 1.5rem; }
+    .about-quote::before { content: '\201C'; color: var(--accent); font-size: 3rem; line-height: 0; vertical-align: -0.5em; margin-right: 0.2em; }
+    .about-author { font-size: 0.85rem; color: var(--accent); letter-spacing: 0.1em; }
+    .about-text p { color: var(--text-light); line-height: 1.8; font-weight: 300; margin-bottom: 1.2rem; font-size: 0.95rem; }
+    .about-highlights { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
+    .highlight { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; color: var(--text-mid); }
+    .highlight::before { content: '\2014'; color: var(--accent); }
+
+    /* LOCATION */
+    #location { background: var(--bg-alt); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1.8fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .location-info h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 1.5rem; color: var(--text); }
+    .location-info p { color: var(--text-light); font-size: 0.9rem; line-height: 1.8; font-weight: 300; margin-bottom: 1.5rem; }
+    .location-detail { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-mid); }
+    .location-detail-icon { color: var(--accent); flex-shrink: 0; }
+    .location-detail a { color: var(--text-mid); text-decoration: none; }
+    .location-detail a:hover { color: var(--accent); }
+    .map-wrapper { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; position: relative; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .map-wrapper iframe { display: block; width: 100%; height: 420px; }
+    .map-badge { position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.95); border: 1px solid var(--border); padding: 0.4rem 0.9rem; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--accent); border-radius: 2px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* CONTACT */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3rem; }
+    .contact-info h3, .contact-form h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 300; margin-bottom: 2rem; color: var(--text); }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.8rem; }
+    .contact-item-icon { width: 40px; height: 40px; background: var(--accent-light); border: 1px solid #bfdbfe; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; border-radius: 2px; }
+    .contact-item-text { font-size: 0.9rem; }
+    .contact-item-text strong { display: block; color: var(--text); margin-bottom: 0.2rem; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .contact-item-text a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    .contact-item-text a:hover { color: var(--accent); }
+    .contact-item-text span { color: var(--text-light); }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.8rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; border-radius: 2px; outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); background: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; background: var(--accent); color: #fff; border: none; padding: 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; cursor: pointer; border-radius: 2px; transition: background 0.2s; margin-top: 0.5rem; }
+    .form-submit:hover { background: var(--accent-bright); }
+
+    /* FOOTER */
+    footer { background: var(--text); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #fff; }
+    .footer-logo span { color: #7dd3fc; }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: #7dd3fc; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      #hero { padding: 6rem 1.5rem 3rem; }
+      .hero-stats { position: static; margin-top: 3rem; justify-content: flex-start; }
+      section { padding: 4rem 1.5rem; }
+      #about { grid-template-columns: 1fr; gap: 3rem; }
+      .location-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .map-wrapper iframe { height: 300px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Physio<span>Joni</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#location" data-i18n="nav.location">Location</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav.book">Book Now</a></li>
+      <li>
+        <div class="lang-switcher">
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+          <button class="lang-btn active" onclick="setLang('fi')">FI</button>
+          <button class="lang-btn" onclick="setLang('sv')">SV</button>
+        </div>
+      </li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Physiotherapist &middot; Oulu, Finland</p>
+      <h1 data-i18n-html="hero.heading">Move Better.<br>Live <em>Without</em><br>Pain.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Joni Seppälä is a professional physiotherapist based in Oulu offering expert rehabilitation, sports injury treatment, and long-term care for a full, active life.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Book an Appointment</a>
+        <a href="#services" class="btn-secondary" data-i18n="hero.cta2">View Services</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">6<span>+</span></div><div class="stat-label" data-i18n="hero.stat1">Specialisms</div></div>
+      <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label" data-i18n="hero.stat2">Personalised Care</div></div>
+      <div class="stat"><div class="stat-num">1<span>st</span></div><div class="stat-label" data-i18n="hero.stat3">Consult Free</div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-intro reveal">
+      <p class="section-label" data-i18n="services.label">What I Treat</p>
+      <h2 data-i18n="services.heading">Expert Care for Every Recovery</h2>
+      <p data-i18n="services.intro">From acute sports injuries to long-term occupational rehabilitation, every treatment plan is tailored to your specific needs and goals.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <span class="service-icon">&#127939;</span>
+        <h3 data-i18n="services.s1.title">Sports Injuries</h3>
+        <p data-i18n="services.s1.desc">Assessment, treatment and rehabilitation of sports-related injuries. Get back to peak performance safely and efficiently.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">&#129460;</span>
+        <h3 data-i18n="services.s2.title">Back Pain</h3>
+        <p data-i18n="services.s2.desc">Targeted therapy for acute and chronic back pain. Evidence-based techniques to reduce pain and prevent recurrence.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">&#129309;</span>
+        <h3 data-i18n="services.s3.title">Arthritis Support Group</h3>
+        <p data-i18n="services.s3.desc">Guided group sessions designed to manage arthritis symptoms, improve mobility, and build a supportive community.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">&#129459;</span>
+        <h3 data-i18n="services.s4.title">ACL Rehabilitation</h3>
+        <p data-i18n="services.s4.desc">Structured, progressive ACL recovery programmes from initial injury through to full return-to-sport clearance.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">&#9877;&#65039;</span>
+        <h3 data-i18n="services.s5.title">Post-Surgery Rehab</h3>
+        <p data-i18n="services.s5.desc">Comprehensive post-operative rehabilitation to restore strength, range of motion, and functional independence.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="service-icon">&#128188;</span>
+        <h3 data-i18n="services.s6.title">Occupational Rehab</h3>
+        <p data-i18n="services.s6.desc">Work-focused rehabilitation to help you recover from workplace injuries and return to your job safely and confidently.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-card">
+        <p class="about-quote" data-i18n="about.quote">My goal is not just to relieve your pain today, but to give you the tools to stay strong and mobile for years to come.</p>
+        <p class="about-author">&mdash; Joni Seppälä, <span data-i18n="about.role">Physiotherapist</span></p>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p class="section-label" data-i18n="about.label">About</p>
+      <h2 data-i18n="about.heading">Physiotherapy Done Right</h2>
+      <p data-i18n="about.p1">Joni Seppälä is a qualified physiotherapist working at a clinic in Oulu, Finland. With a strong background in musculoskeletal and sports physiotherapy, Joni brings a patient-first approach to every treatment.</p>
+      <p data-i18n="about.p2">Whether you're a competitive athlete recovering from an ACL tear or someone managing chronic back pain at work, Joni creates individualised programmes that deliver real, lasting results.</p>
+      <div class="about-highlights">
+        <div class="highlight" data-i18n="about.h1">Qualified physiotherapist, Oulu clinic</div>
+        <div class="highlight" data-i18n="about.h2">Sports &amp; musculoskeletal specialist</div>
+        <div class="highlight" data-i18n="about.h3">Evidence-based treatment methods</div>
+        <div class="highlight" data-i18n="about.h4">Finnish &amp; English consultations</div>
+        <div class="highlight" data-i18n="about.h5">Group and individual sessions available</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="reveal">
+      <p class="section-label" data-i18n="location.label">Find Us</p>
+      <h2 data-i18n="location.heading">Visit the Clinic in Oulu</h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <h3 data-i18n="location.subheading">Getting Here</h3>
+        <p data-i18n="location.desc">The clinic is conveniently located in Oulu, easily accessible by public transport, bicycle, or car.</p>
+        <div class="location-detail"><span class="location-detail-icon">&#128205;</span><span>Oulu, Finland</span></div>
+        <div class="location-detail"><span class="location-detail-icon">&#128222;</span><a href="tel:+3589098756">+358 909 8756</a></div>
+        <div class="location-detail"><span class="location-detail-icon">&#9993;&#65039;</span><a href="mailto:joniseppala@gmail.com">joniseppala@gmail.com</a></div>
+        <div class="location-detail"><span class="location-detail-icon">&#128336;</span><span data-i18n="location.hours">Mon&ndash;Fri: 8:00&ndash;18:00 &nbsp;|&nbsp; Sat: 9:00&ndash;13:00</span></div>
+        <div style="margin-top:2rem;">
+          <a href="https://share.google/TYXajXCvpcI6MqwYC" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.85rem;" data-i18n="location.mapBtn">Open in Google Maps &#8594;</a>
+        </div>
+      </div>
+      <div class="map-wrapper reveal">
+        <div class="map-badge">&#128205; Oulu, Finland</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57627.45785194098!2d25.3261!3d65.0121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467f29dce4fcdb1b%3A0x8e35e5e3a5e0fc01!2sOulu%2C%20Finland!5e0!3m2!1sen!2sfi!4v1700000000000!5m2!1sen!2sfi"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Physio Joni clinic location in Oulu, Finland">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="reveal">
+      <p class="section-label" data-i18n="contact.label">Get in Touch</p>
+      <h2 data-i18n="contact.heading">Book Your Appointment</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3 data-i18n="contact.infoHeading">Contact Information</h3>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128222;</div>
+          <div class="contact-item-text"><strong data-i18n="contact.phone">Phone</strong><a href="tel:+3589098756">+358 909 8756</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#9993;</div>
+          <div class="contact-item-text"><strong data-i18n="contact.email">Email</strong><a href="mailto:joniseppala@gmail.com">joniseppala@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128205;</div>
+          <div class="contact-item-text"><strong data-i18n="contact.locationLabel">Location</strong><span>Oulu, Finland</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">&#128336;</div>
+          <div class="contact-item-text"><strong data-i18n="contact.hoursLabel">Hours</strong><span data-i18n="contact.hoursVal">Mon&ndash;Fri: 8:00&ndash;18:00<br>Sat: 9:00&ndash;13:00</span></div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3 data-i18n="contact.formHeading">Send a Message</h3>
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" data-i18n="contact.firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Matti" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName" data-i18n="contact.lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Virtanen" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="contact.emailLabel">Email</label>
+            <input type="email" id="email" name="email" placeholder="matti@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service" data-i18n="contact.serviceLabel">Service</label>
+            <select id="service" name="service">
+              <option value="" data-i18n="contact.servicePlaceholder">Select a service...</option>
+              <option data-i18n="services.s1.title">Sports Injuries</option>
+              <option data-i18n="services.s2.title">Back Pain</option>
+              <option data-i18n="services.s3.title">Arthritis Support Group</option>
+              <option data-i18n="services.s4.title">ACL Rehabilitation</option>
+              <option data-i18n="services.s5.title">Post-Surgery Rehab</option>
+              <option data-i18n="services.s6.title">Occupational Rehab</option>
+              <option data-i18n="contact.serviceOther">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="contact.messageLabel">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a little about your situation..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" data-i18n="contact.submit">Send Message &#8594;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Physio<span>Joni</span> &mdash; Oulu</div>
+    <p data-i18n="footer.copy">&copy; 2026 Joni Seppälä Physiotherapy. All rights reserved.</p>
+    <p>Oulu, Finland &middot; <a href="mailto:joniseppala@gmail.com">joniseppala@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // ── TRANSLATIONS ──────────────────────────────────────────────
+    var translations = {
+      en: {
+        "nav.services": "Services",
+        "nav.about": "About",
+        "nav.location": "Location",
+        "nav.contact": "Contact",
+        "nav.book": "Book Now",
+        "hero.eyebrow": "Physiotherapist · Oulu, Finland",
+        "hero.heading": "Move Better.<br>Live <em>Without</em><br>Pain.",
+        "hero.sub": "Joni Seppälä is a professional physiotherapist based in Oulu offering expert rehabilitation, sports injury treatment, and long-term care for a full, active life.",
+        "hero.cta1": "Book an Appointment",
+        "hero.cta2": "View Services",
+        "hero.stat1": "Specialisms",
+        "hero.stat2": "Personalised Care",
+        "hero.stat3": "Consult Free",
+        "services.label": "What I Treat",
+        "services.heading": "Expert Care for Every Recovery",
+        "services.intro": "From acute sports injuries to long-term occupational rehabilitation, every treatment plan is tailored to your specific needs and goals.",
+        "services.s1.title": "Sports Injuries",
+        "services.s1.desc": "Assessment, treatment and rehabilitation of sports-related injuries. Get back to peak performance safely and efficiently.",
+        "services.s2.title": "Back Pain",
+        "services.s2.desc": "Targeted therapy for acute and chronic back pain. Evidence-based techniques to reduce pain and prevent recurrence.",
+        "services.s3.title": "Arthritis Support Group",
+        "services.s3.desc": "Guided group sessions designed to manage arthritis symptoms, improve mobility, and build a supportive community.",
+        "services.s4.title": "ACL Rehabilitation",
+        "services.s4.desc": "Structured, progressive ACL recovery programmes from initial injury through to full return-to-sport clearance.",
+        "services.s5.title": "Post-Surgery Rehab",
+        "services.s5.desc": "Comprehensive post-operative rehabilitation to restore strength, range of motion, and functional independence.",
+        "services.s6.title": "Occupational Rehab",
+        "services.s6.desc": "Work-focused rehabilitation to help you recover from workplace injuries and return to your job safely and confidently.",
+        "about.label": "About",
+        "about.heading": "Physiotherapy Done Right",
+        "about.quote": "My goal is not just to relieve your pain today, but to give you the tools to stay strong and mobile for years to come.",
+        "about.role": "Physiotherapist",
+        "about.p1": "Joni Seppälä is a qualified physiotherapist working at a clinic in Oulu, Finland. With a strong background in musculoskeletal and sports physiotherapy, Joni brings a patient-first approach to every treatment.",
+        "about.p2": "Whether you're a competitive athlete recovering from an ACL tear or someone managing chronic back pain at work, Joni creates individualised programmes that deliver real, lasting results.",
+        "about.h1": "Qualified physiotherapist, Oulu clinic",
+        "about.h2": "Sports & musculoskeletal specialist",
+        "about.h3": "Evidence-based treatment methods",
+        "about.h4": "Finnish & English consultations",
+        "about.h5": "Group and individual sessions available",
+        "location.label": "Find Us",
+        "location.heading": "Visit the Clinic in Oulu",
+        "location.subheading": "Getting Here",
+        "location.desc": "The clinic is conveniently located in Oulu, easily accessible by public transport, bicycle, or car.",
+        "location.hours": "Mon–Fri: 8:00–18:00 | Sat: 9:00–13:00",
+        "location.mapBtn": "Open in Google Maps →",
+        "contact.label": "Get in Touch",
+        "contact.heading": "Book Your Appointment",
+        "contact.infoHeading": "Contact Information",
+        "contact.phone": "Phone",
+        "contact.email": "Email",
+        "contact.locationLabel": "Location",
+        "contact.hoursLabel": "Hours",
+        "contact.hoursVal": "Mon–Fri: 8:00–18:00 | Sat: 9:00–13:00",
+        "contact.formHeading": "Send a Message",
+        "contact.firstName": "First Name",
+        "contact.lastName": "Last Name",
+        "contact.emailLabel": "Email",
+        "contact.serviceLabel": "Service",
+        "contact.servicePlaceholder": "Select a service...",
+        "contact.serviceOther": "Other / Not Sure",
+        "contact.messageLabel": "Message",
+        "contact.submit": "Send Message →",
+        "footer.copy": "© 2026 Joni Seppälä Physiotherapy. All rights reserved."
+      },
+      fi: {
+        "nav.services": "[FI] Palvelut",
+        "nav.about": "[FI] Tietoa",
+        "nav.location": "[FI] Sijainti",
+        "nav.contact": "[FI] Yhteystiedot",
+        "nav.book": "[FI] Varaa aika",
+        "hero.eyebrow": "[FI] Fysioterapeutti · Oulu, Suomi",
+        "hero.heading": "[FI] Liiku paremmin.<br>Elä <em>ilman</em><br>kipua.",
+        "hero.sub": "[FI] FILLER: Joni Seppälä on ammattitaitoinen fysioterapeutti Oulussa, joka tarjoaa kuntoutusta, urheiluvammojen hoitoa ja pitkäaikaista hoitoa.",
+        "hero.cta1": "[FI] Varaa aika",
+        "hero.cta2": "[FI] Katso palvelut",
+        "hero.stat1": "[FI] Erikoisalaa",
+        "hero.stat2": "[FI] Yksilöllistä hoitoa",
+        "hero.stat3": "[FI] Konsultaatio ilmainen",
+        "services.label": "[FI] Mitä hoidan",
+        "services.heading": "[FI] FILLER: Asiantunteva hoito jokaiseen kuntoutukseen",
+        "services.intro": "[FI] FILLER: Akuuteista urheiluvammoista pitkäaikaiseen työkykyyn, jokainen hoitosuunnitelma räätälöidään tarpeidesi mukaan.",
+        "services.s1.title": "[FI] Urheiluvammat",
+        "services.s1.desc": "[FI] FILLER: Urheiluvammojen arviointi, hoito ja kuntoutus. Palaa huipputasolle turvallisesti.",
+        "services.s2.title": "[FI] Selkäkipu",
+        "services.s2.desc": "[FI] FILLER: Kohdennettua hoitoa akuuttiin ja krooniseen selkäkipuun. Näyttöön perustuvia menetelmiä.",
+        "services.s3.title": "[FI] Nivelreumaryhmä",
+        "services.s3.desc": "[FI] FILLER: Ohjattuja ryhmätunteja nivelreuman oireiden hallintaan ja liikkuvuuden parantamiseen.",
+        "services.s4.title": "[FI] ACL-kuntoutus",
+        "services.s4.desc": "[FI] FILLER: Jäsennelty, etenevä ACL-kuntoutusohjelma loukkaantumisesta täyteen urheiluun palaamiseen.",
+        "services.s5.title": "[FI] Leikkauksen jälkeinen kuntoutus",
+        "services.s5.desc": "[FI] FILLER: Kattava postoperatiivinen kuntoutus voiman ja liikkuvuuden palauttamiseksi.",
+        "services.s6.title": "[FI] Työkuntoutus",
+        "services.s6.desc": "[FI] FILLER: Työhön suuntautunut kuntoutus, joka auttaa sinua palaamaan töihin turvallisesti.",
+        "about.label": "[FI] Tietoa",
+        "about.heading": "[FI] Fysioterapia oikein tehtynä",
+        "about.quote": "[FI] FILLER: Tavoitteeni ei ole vain lievittää kipuasi tänään, vaan antaa sinulle välineet pysyä vahvana ja liikkuvana vuosien ajan.",
+        "about.role": "[FI] Fysioterapeutti",
+        "about.p1": "[FI] FILLER: Joni Seppälä on pätevä fysioterapeutti, joka työskentelee klinikalla Oulussa.",
+        "about.p2": "[FI] FILLER: Olipa kyse kilpaurheilijasta tai kroonisesta selkäkivusta, Joni luo yksilöllisiä ohjelmia.",
+        "about.h1": "[FI] Pätevä fysioterapeutti, Oulun klinikka",
+        "about.h2": "[FI] Urheilu- ja tuki- ja liikuntaelimistön erikoislääkäri",
+        "about.h3": "[FI] Näyttöön perustuvat hoitomenetelmät",
+        "about.h4": "[FI] Suomen- ja englanninkieliset konsultaatiot",
+        "about.h5": "[FI] Ryhmä- ja yksilösessiot saatavilla",
+        "location.label": "[FI] Löydä meidät",
+        "location.heading": "[FI] Vieraile klinikalla Oulussa",
+        "location.subheading": "[FI] Tänne pääset",
+        "location.desc": "[FI] FILLER: Klinikka sijaitsee kätevästi Oulun keskustassa, helposti saavutettavissa julkisella liikenteellä.",
+        "location.hours": "[FI] Ma–Pe: 8:00–18:00 | La: 9:00–13:00",
+        "location.mapBtn": "[FI] Avaa Google Mapsissa →",
+        "contact.label": "[FI] Ota yhteyttä",
+        "contact.heading": "[FI] Varaa aikasi",
+        "contact.infoHeading": "[FI] Yhteystiedot",
+        "contact.phone": "[FI] Puhelin",
+        "contact.email": "[FI] Sähköposti",
+        "contact.locationLabel": "[FI] Sijainti",
+        "contact.hoursLabel": "[FI] Aukioloajat",
+        "contact.hoursVal": "[FI] Ma–Pe: 8:00–18:00 | La: 9:00–13:00",
+        "contact.formHeading": "[FI] Lähetä viesti",
+        "contact.firstName": "[FI] Etunimi",
+        "contact.lastName": "[FI] Sukunimi",
+        "contact.emailLabel": "[FI] Sähköposti",
+        "contact.serviceLabel": "[FI] Palvelu",
+        "contact.servicePlaceholder": "[FI] Valitse palvelu...",
+        "contact.serviceOther": "[FI] Muu / En ole varma",
+        "contact.messageLabel": "[FI] Viesti",
+        "contact.submit": "[FI] Lähetä viesti →",
+        "footer.copy": "[FI] © 2026 Joni Seppälä Fysioterapia. Kaikki oikeudet pidätetään."
+      },
+      sv: {
+        "nav.services": "[SV] Tjänster",
+        "nav.about": "[SV] Om oss",
+        "nav.location": "[SV] Plats",
+        "nav.contact": "[SV] Kontakt",
+        "nav.book": "[SV] Boka nu",
+        "hero.eyebrow": "[SV] Fysioterapeut · Uleåborg, Finland",
+        "hero.heading": "[SV] Rör dig bättre.<br>Lev <em>utan</em><br>smärta.",
+        "hero.sub": "[SV] FILLER: Joni Seppälä är en professionell fysioterapeut i Uleåborg som erbjuder expertrehabilitering och behandling av idrottsskador.",
+        "hero.cta1": "[SV] Boka ett möte",
+        "hero.cta2": "[SV] Se tjänster",
+        "hero.stat1": "[SV] Specialiteter",
+        "hero.stat2": "[SV] Personlig vård",
+        "hero.stat3": "[SV] Konsultation gratis",
+        "services.label": "[SV] Vad jag behandlar",
+        "services.heading": "[SV] FILLER: Expertvård för varje rehabilitering",
+        "services.intro": "[SV] FILLER: Från akuta idrottsskador till långsiktig arbetsrehabilitering, varje behandlingsplan är skräddarsydd.",
+        "services.s1.title": "[SV] Idrottsskador",
+        "services.s1.desc": "[SV] FILLER: Bedömning, behandling och rehabilitering av idrottsrelaterade skador.",
+        "services.s2.title": "[SV] Ryggsmärta",
+        "services.s2.desc": "[SV] FILLER: Riktad terapi för akut och kronisk ryggsmärta. Evidensbaserade tekniker.",
+        "services.s3.title": "[SV] Artritsupportgrupp",
+        "services.s3.desc": "[SV] FILLER: Guidade gruppsessioner för att hantera artritssymptom och förbättra rörligheten.",
+        "services.s4.title": "[SV] ACL-rehabilitering",
+        "services.s4.desc": "[SV] FILLER: Strukturerade ACL-återhämtningsprogram från skada till full återgång till sport.",
+        "services.s5.title": "[SV] Postoperativ rehab",
+        "services.s5.desc": "[SV] FILLER: Omfattande postoperativ rehabilitering för att återställa styrka och rörlighet.",
+        "services.s6.title": "[SV] Arbetsrehabilitering",
+        "services.s6.desc": "[SV] FILLER: Arbetsrehabilitering för att hjälpa dig återvända till jobbet säkert.",
+        "about.label": "[SV] Om",
+        "about.heading": "[SV] Fysioterapi gjord rätt",
+        "about.quote": "[SV] FILLER: Mitt mål är inte bara att lindra din smärta idag, utan att ge dig verktygen att hålla dig stark och rörlig i många år framöver.",
+        "about.role": "[SV] Fysioterapeut",
+        "about.p1": "[SV] FILLER: Joni Seppälä är en kvalificerad fysioterapeut som arbetar på en klinik i Uleåborg, Finland.",
+        "about.p2": "[SV] FILLER: Oavsett om du är en idrottare som återhämtar sig från en ACL-skada eller hanterar kronisk ryggsmärta.",
+        "about.h1": "[SV] Kvalificerad fysioterapeut, Uleåborg",
+        "about.h2": "[SV] Idrotts- och rörelseapparatspecialist",
+        "about.h3": "[SV] Evidensbaserade behandlingsmetoder",
+        "about.h4": "[SV] Konsultationer på finska och engelska",
+        "about.h5": "[SV] Grupp- och individuella sessioner tillgängliga",
+        "location.label": "[SV] Hitta oss",
+        "location.heading": "[SV] Besök kliniken i Uleåborg",
+        "location.subheading": "[SV] Hitta hit",
+        "location.desc": "[SV] FILLER: Kliniken är bekvämt belägen i Uleåborg, lätt tillgänglig med kollektivtrafik.",
+        "location.hours": "[SV] Mån–Fre: 8:00–18:00 | Lör: 9:00–13:00",
+        "location.mapBtn": "[SV] Öppna i Google Maps →",
+        "contact.label": "[SV] Kontakta oss",
+        "contact.heading": "[SV] Boka din tid",
+        "contact.infoHeading": "[SV] Kontaktinformation",
+        "contact.phone": "[SV] Telefon",
+        "contact.email": "[SV] E-post",
+        "contact.locationLabel": "[SV] Plats",
+        "contact.hoursLabel": "[SV] Öppettider",
+        "contact.hoursVal": "[SV] Mån–Fre: 8:00–18:00 | Lör: 9:00–13:00",
+        "contact.formHeading": "[SV] Skicka ett meddelande",
+        "contact.firstName": "[SV] Förnamn",
+        "contact.lastName": "[SV] Efternamn",
+        "contact.emailLabel": "[SV] E-post",
+        "contact.serviceLabel": "[SV] Tjänst",
+        "contact.servicePlaceholder": "[SV] Välj en tjänst...",
+        "contact.serviceOther": "[SV] Annat / Vet ej",
+        "contact.messageLabel": "[SV] Meddelande",
+        "contact.submit": "[SV] Skicka meddelande →",
+        "footer.copy": "[SV] © 2026 Joni Seppälä Fysioterapi. Alla rättigheter förbehållna."
+      }
+    };
+
+    // ── LANGUAGE ENGINE ───────────────────────────────────────────
+    var currentLang = 'fi';
+
+    function setLang(lang) {
+      currentLang = lang;
+      var t = translations[lang];
+
+      // Update html lang attribute
+      document.documentElement.lang = lang;
+
+      // Update all text elements
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Update elements with HTML content (e.g. h1 with <em> and <br>)
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+
+      // Update active button state
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+      });
+
+      // Update URL param for SEO/sharing
+      var url = new URL(window.location);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+    }
+
+    // On page load, check URL param
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get('lang') || 'fi';
+      if (lang && translations[lang]) {
+        setLang(lang);
+      }
+    })();
+
+    // ── MOBILE NAV ────────────────────────────────────────────────
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() { navLinks.classList.toggle('open'); });
+    navLinks.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { navLinks.classList.remove('open'); }); });
+
+    // ── SCROLL REVEAL ─────────────────────────────────────────────
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function() { entry.target.classList.add('visible'); }, i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function(el) { observer.observe(el); });
+
+    // ── FORM SUBMIT ───────────────────────────────────────────────
+    document.getElementById('contactForm').addEventListener('submit', function() {
+      var btn = this.querySelector('.form-submit');
+      btn.textContent = translations[currentLang]['contact.submit'] + '...' || 'Sending...';
+      btn.style.opacity = '0.7';
+    });
+  </script>
+
+</body>
+</html>
